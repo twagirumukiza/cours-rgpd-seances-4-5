@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cours RGPD — Séances 4 et 5 : obligations, droits des personnes et violations de données. Support pédagogique complet avec lexique et FAQ." />
+  <title>RGPD — Séances 4 &amp; 5 | Cybersécurité &amp; Conformité</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#accueil" class="logo">
+        <span class="logo-icon">🛡️</span>
+        <span>RGPD • Séances 4 &amp; 5</span>
+      </a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <a href="#accueil">Accueil</a>
+        <a href="#objectifs">Objectifs</a>
+        <a href="#seance4">Séance 4</a>
+        <a href="#seance5">Séance 5</a>
+        <a href="#cas">Cas pratiques</a>
+        <a href="#lexique">Lexique</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="accueil" class="hero">
+      <div class="container">
+        <p class="hero-badge">Cours de cybersécurité &amp; conformité</p>
+        <h1>RGPD : obligations, droits des personnes et violations de données</h1>
+        <p class="hero-sub">Séances 4 et 5 — 4 heures de formation<br />Support apprenant • Schémas • Cas pratiques corrigés • Fiche type de notification • Lexique • FAQ</p>
+        <div class="hero-meta">
+          <span>📚 Niveau : BTS / formation professionnelle</span>
+          <span>📜 Règlement (UE) 2016/679</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#seance4" class="btn btn-primary">Commencer la séance 4</a>
+          <a href="#lexique" class="btn btn-outline">Lexique &amp; FAQ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Objectifs -->
+    <section id="objectifs" class="section">
+      <div class="container">
+        <h2>Objectifs pédagogiques</h2>
+        <ul class="objectives-list">
+          <li>Distinguer responsable de traitement, sous-traitant, responsable conjoint et DPO.</li>
+          <li>Expliquer l’utilité du registre et remplir une fiche de traitement simple.</li>
+          <li>Choisir et justifier une base légale parmi les six bases prévues par l’article 6.</li>
+          <li>Reconnaître les conditions d’un consentement valide.</li>
+          <li>Expliquer les droits d’accès, de rectification, d’effacement et de portabilité.</li>
+          <li>Qualifier une violation de données et appliquer les règles de documentation, de notification et de communication.</li>
+          <li>Rédiger une fiche de notification contenant les informations utiles, sans inventer les éléments inconnus.</li>
+        </ul>
+
+        <h3 class="mt-lg">Vue d’ensemble des deux séances</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Séance</th>
+                <th>Durée</th>
+                <th>Compétences principales</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>4 — Obligations RGPD</strong></td>
+                <td>2 h</td>
+                <td>Acteurs, registre, consentement et bases légales</td>
+              </tr>
+              <tr>
+                <td><strong>5 — Droits et violations</strong></td>
+                <td>2 h</td>
+                <td>Droits des personnes, qualification d’une violation, CNIL et information des personnes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SÉANCE 4 ========== -->
+    <section id="seance4" class="section section-alt">
+      <div class="container">
+        <h2>Séance 4 — Obligations RGPD <span class="badge">2 heures</span></h2>
+
+        <!-- Partie 1 -->
+        <article class="card" id="s4-p1">
+          <h3>Partie 1 — Les acteurs et leurs responsabilités <span class="time">30 min</span></h3>
+
+          <h4>1.1. Qu’est-ce qu’une donnée personnelle et un traitement ?</h4>
+          <p>Une <strong>donnée personnelle</strong> est toute information se rapportant à une personne physique identifiée ou identifiable. Le nom, l’adresse électronique nominative, l’identifiant d’un compte, certaines adresses IP, les données de localisation et les données de santé peuvent être des données personnelles selon le contexte.</p>
+          <p>Un <strong>traitement</strong> est une opération ou un ensemble d’opérations appliquées à des données : collecte, enregistrement, classement, consultation, transmission, modification, conservation ou suppression. Il peut être numérique, sur papier ou hybride.</p>
+          <p class="examples"><strong>Exemples :</strong> gérer les candidatures, établir les fiches de paie, administrer les comptes informatiques, envoyer une newsletter, gérer les dossiers de patients ou enregistrer les visiteurs.</p>
+
+          <h4>1.2. Les acteurs à distinguer</h4>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Acteur</th>
+                  <th>Rôle</th>
+                  <th>Exemple</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Responsable de traitement</strong></td>
+                  <td>Détermine les finalités (pourquoi) et les moyens essentiels (comment) du traitement.</td>
+                  <td>Une école choisit de collecter les coordonnées des étudiants pour gérer les inscriptions.</td>
+                </tr>
+                <tr>
+                  <td><strong>Sous-traitant</strong></td>
+                  <td>Traite des données pour le compte du responsable, selon ses instructions documentées.</td>
+                  <td>Un prestataire héberge la plateforme d’inscription.</td>
+                </tr>
+                <tr>
+                  <td><strong>DPO / délégué à la protection des données</strong></td>
+                  <td>Informe, conseille, sensibilise, contrôle la conformité et sert de point de contact avec l’autorité.</td>
+                  <td>Le DPO conseille sur les durées de conservation et suit les demandes de droits.</td>
+                </tr>
+                <tr>
+                  <td><strong>Responsables conjoints</strong></td>
+                  <td>Déterminent ensemble les finalités et les moyens essentiels d’un traitement.</td>
+                  <td>Deux organismes conçoivent ensemble une campagne et décident des données à collecter.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="schema">
+            <h5>Schéma à mémoriser</h5>
+            <div class="schema-grid">
+              <div class="schema-box">
+                <strong>Responsable de traitement</strong>
+                <span>Décide du pourquoi et des moyens essentiels</span>
+              </div>
+              <div class="schema-box">
+                <strong>Sous-traitant</strong>
+                <span>Exécute pour le compte du responsable</span>
+              </div>
+              <div class="schema-box">
+                <strong>DPO</strong>
+                <span>Conseil, contrôle et point de contact</span>
+              </div>
+            </div>
+          </div>
+
+          <p>Le DPO ne remplace pas la direction et n’endosse pas automatiquement toute la responsabilité juridique. Sa désignation est obligatoire dans les cas prévus à l’article 37 : notamment certaines autorités publiques, certaines activités de suivi régulier et systématique à grande échelle et certains traitements à grande échelle de données sensibles.</p>
+
+          <h4>1.3. Exemple : fuite chez un hébergeur</h4>
+          <p>Une entreprise confie l’hébergement de sa base clients à un prestataire. Une mauvaise configuration rend la base accessible publiquement.</p>
+          <ul>
+            <li>L’entreprise est généralement <strong>responsable du traitement</strong> si elle a déterminé les finalités et les moyens essentiels.</li>
+            <li>L’hébergeur est <strong>sous-traitant</strong> s’il agit uniquement sur instructions documentées.</li>
+            <li>Les équipes techniques doivent contenir l’exposition, préserver les éléments utiles à l’enquête et déterminer les données concernées.</li>
+            <li>Le DPO, s’il existe, conseille et surveille la conformité ; la décision de notification relève du responsable de traitement.</li>
+            <li>Le contrat doit encadrer la sécurité, la confidentialité, l’assistance et la transmission rapide des informations en cas de violation.</li>
+          </ul>
+          <p class="warning"><strong>Attention :</strong> si un sous-traitant décide lui-même des finalités et des moyens essentiels, il peut être considéré comme responsable de traitement pour ce traitement.</p>
+
+          <div class="exercice">
+            <h5>Exercice 1 — Identifier les rôles</h5>
+            <p>Une clinique choisit les données collectées et leurs usages médicaux. Un prestataire héberge le logiciel selon ses instructions. Une personne indépendante est formellement désignée DPO.</p>
+            <p><em>Questions :</em> qui est responsable de traitement ? Quel est le rôle du prestataire ? Que fait le DPO ? Qui décide des finalités ?</p>
+            <details>
+              <summary>Voir la correction</summary>
+              <p>La clinique est responsable de traitement ; le prestataire est sous-traitant dans le scénario décrit ; le DPO conseille, sensibilise et contrôle avec indépendance ; les finalités sont déterminées par la clinique.</p>
+            </details>
+          </div>
+        </article>
+
+        <!-- Partie 2 -->
+        <article class="card" id="s4-p2">
+          <h3>Partie 2 — Le registre des activités de traitement <span class="time">25 min</span></h3>
+
+          <h4>2.1. À quoi sert le registre ?</h4>
+          <p>Le registre, prévu par l’article 30, donne une vue structurée des traitements mis en œuvre. Il aide à savoir quelles données sont utilisées, pour quelles raisons, par qui, pendant combien de temps et avec quelles protections. C’est un outil de pilotage et de preuve de conformité, pas une simple liste de logiciels.</p>
+          <p>Le registre doit refléter la réalité et être mis à jour lors des changements : nouvelle finalité, nouvelle catégorie de données, nouveau destinataire, changement de durée de conservation ou nouvelle mesure de sécurité.</p>
+
+          <h4>2.2. Contenu essentiel d’une fiche de registre</h4>
+          <ul>
+            <li>Identité et coordonnées du responsable de traitement et, le cas échéant, du DPO et des responsables conjoints.</li>
+            <li>Finalités du traitement.</li>
+            <li>Catégories de personnes concernées : clients, salariés, candidats, élèves, patients, etc.</li>
+            <li>Catégories de données : identité, coordonnées, données RH, données de connexion, données sensibles, etc.</li>
+            <li>Catégories de destinataires, y compris les sous-traitants et, le cas échéant, les destinataires dans des pays tiers.</li>
+            <li>Transferts hors de l’Espace économique européen, le cas échéant, et garanties associées.</li>
+            <li>Délais prévus d’effacement ou critères permettant de les déterminer.</li>
+            <li>Description générale des mesures de sécurité techniques et organisationnelles.</li>
+          </ul>
+          <p>Le RGPD prévoit une exception limitée à l’obligation de registre pour certaines organisations de moins de 250 salariés, mais elle ne s’applique pas lorsque les traitements présentent les caractéristiques visées par l’article 30(5). En pratique, une petite structure doit donc vérifier ses traitements plutôt que supposer qu’elle est exemptée.</p>
+
+          <h4>2.3. Exemple de fiche simplifiée</h4>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Champ</th>
+                  <th>Exemple : gestion des candidatures</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Finalité</td><td>Recevoir, examiner et suivre les candidatures à un emploi.</td></tr>
+                <tr><td>Personnes concernées</td><td>Candidats et personnes de référence, si applicable.</td></tr>
+                <tr><td>Données</td><td>Identité, coordonnées, CV, lettre de motivation, échanges liés au recrutement.</td></tr>
+                <tr><td>Base légale</td><td>À déterminer selon les opérations : mesures précontractuelles demandées par le candidat et/ou intérêt légitime, après analyse.</td></tr>
+                <tr><td>Destinataires</td><td>RH et managers habilités ; prestataire de recrutement si nécessaire.</td></tr>
+                <tr><td>Conservation</td><td>Durée définie et justifiée selon les étapes du recrutement et les obligations applicables.</td></tr>
+                <tr><td>Sécurité</td><td>Accès limité, authentification, journalisation pertinente, sauvegardes et suppression contrôlée.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tip"><strong>Méthode :</strong> recenser les activités par finalité, et non par nom du logiciel. Un même logiciel peut servir à plusieurs traitements ; inversement, une finalité peut mobiliser plusieurs outils.</p>
+
+          <div class="exercice">
+            <h5>Exercice 2 — Repérer les oublis</h5>
+            <p>Un registre indique uniquement : « Logiciel RH — données salariés — accès RH ». Citez quatre informations à compléter.</p>
+            <details>
+              <summary>Voir la correction</summary>
+              <p>Finalités précises, catégories de données, destinataires, base légale documentée dans le dossier de conformité, durée de conservation, sous-traitants, transferts éventuels et mesures générales de sécurité.</p>
+            </details>
+          </div>
+        </article>
+
+        <!-- Partie 3 -->
+        <article class="card" id="s4-p3">
+          <h3>Partie 3 — Bases légales et consentement <span class="time">35 min</span></h3>
+
+          <h4>3.1. Pourquoi une base légale ?</h4>
+          <p>Avant de commencer un traitement, le responsable doit identifier un fondement juridique applicable à chaque finalité. Le consentement n’est pas systématiquement obligatoire. La base choisie doit correspondre à la réalité du traitement et être expliquée aux personnes.</p>
+
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Base légale (art. 6)</th>
+                  <th>Quand peut-elle s’appliquer ?</th>
+                  <th>Exemple indicatif</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Consentement</strong></td>
+                  <td>La personne accepte librement, spécifiquement, de façon éclairée et par un acte positif clair.</td>
+                  <td>Inscription volontaire à une newsletter lorsque cette base est retenue.</td>
+                </tr>
+                <tr>
+                  <td><strong>Contrat / mesures précontractuelles</strong></td>
+                  <td>Le traitement est nécessaire à l’exécution du contrat ou à des démarches demandées avant sa conclusion.</td>
+                  <td>Utiliser l’adresse de livraison pour expédier une commande.</td>
+                </tr>
+                <tr>
+                  <td><strong>Obligation légale</strong></td>
+                  <td>Une règle impose au responsable de réaliser le traitement.</td>
+                  <td>Conserver certains documents comptables selon les textes applicables.</td>
+                </tr>
+                <tr>
+                  <td><strong>Intérêts vitaux</strong></td>
+                  <td>Nécessaire pour protéger les intérêts vitaux d’une personne physique.</td>
+                  <td>Situation d’urgence grave où la personne ne peut pas donner son accord.</td>
+                </tr>
+                <tr>
+                  <td><strong>Mission d’intérêt public / autorité publique</strong></td>
+                  <td>Nécessaire à une mission fondée sur le droit applicable.</td>
+                  <td>Traitement effectué par un organisme investi d’une mission publique.</td>
+                </tr>
+                <tr>
+                  <td><strong>Intérêts légitimes</strong></td>
+                  <td>Intérêt légitime du responsable ou d’un tiers, après mise en balance avec les droits et libertés des personnes.</td>
+                  <td>Certaines mesures de sécurité ou activités internes, selon le contexte.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Le tableau donne des exemples, pas des automatismes : le responsable doit vérifier la nécessité, la proportionnalité, les textes applicables et les attentes raisonnables des personnes.</p>
+
+          <h4>3.2. Les quatre critères du consentement</h4>
+          <ul class="checklist">
+            <li><strong>Libre :</strong> la personne dispose d’un véritable choix, sans pression indue ni désavantage injustifié en cas de refus.</li>
+            <li><strong>Spécifique :</strong> le choix porte sur une finalité déterminée ; un accord général et vague ne suffit pas.</li>
+            <li><strong>Éclairé :</strong> la personne reçoit une information compréhensible sur le traitement concerné.</li>
+            <li><strong>Univoque :</strong> une action positive claire manifeste l’accord. Le silence, l’inaction ou une case précochée ne suffisent pas.</li>
+          </ul>
+          <p>Le responsable doit pouvoir prouver le consentement. La personne peut le retirer à tout moment, et le retrait doit être aussi simple que l’accord. Le retrait n’annule pas rétroactivement la licéité des opérations réalisées avant celui-ci.</p>
+
+          <h4>3.3. Exemples de consentement valide ou invalide</h4>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Situation</th>
+                  <th>Analyse</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Case newsletter non cochée par défaut, libellé clair, choix distinct.</td>
+                  <td>Peut constituer un consentement valable si les autres conditions sont respectées.</td>
+                </tr>
+                <tr>
+                  <td>Case « J’accepte tout » précochée.</td>
+                  <td>Ne constitue pas un consentement valide.</td>
+                </tr>
+                <tr>
+                  <td>Refus de publicité empêchant l’accès à un service sans justification valable.</td>
+                  <td>Le caractère libre du consentement peut être contesté.</td>
+                </tr>
+                <tr>
+                  <td>Adresse utilisée pour exécuter une commande.</td>
+                  <td>Le contrat peut être la base appropriée ; un consentement n’est pas nécessairement requis pour cette finalité.</td>
+                </tr>
+                <tr>
+                  <td>Conservation de documents imposée par une loi.</td>
+                  <td>L’obligation légale peut être la base appropriée, et non le consentement.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="exercice">
+            <h5>Exercice 3 — Choisir la base</h5>
+            <p>Pour chaque situation, proposez une base légale à vérifier et justifiez-la : (A) expédier une commande ; (B) conserver une facture lorsque la loi l’impose ; (C) envoyer une newsletter facultative ; (D) gérer une demande d’emploi.</p>
+            <details>
+              <summary>Voir la correction</summary>
+              <p>A contrat ; B obligation légale ; C consentement lorsque requis et retenu pour cette finalité ; D mesures précontractuelles à la demande du candidat et/ou intérêt légitime selon l’opération et le contexte. Il faut distinguer les finalités d’un même service.</p>
+            </details>
+          </div>
+        </article>
+
+        <!-- Synthèse séance 4 -->
+        <article class="card card-synth">
+          <h3>Partie 4 — Synthèse de la séance 4</h3>
+          <ul>
+            <li>Le responsable détermine les finalités et les moyens essentiels.</li>
+            <li>Le sous-traitant agit pour le compte du responsable et selon ses instructions documentées.</li>
+            <li>Le DPO conseille et contrôle avec indépendance ; il ne remplace pas la direction.</li>
+            <li>Le registre décrit les traitements et doit être tenu à jour.</li>
+            <li>Chaque finalité doit reposer sur une base légale pertinente.</li>
+            <li>Le consentement est une base parmi six et doit être libre, spécifique, éclairé et univoque.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== SÉANCE 5 ========== -->
+    <section id="seance5" class="section">
+      <div class="container">
+        <h2>Séance 5 — Droits des personnes et notification de violation <span class="badge">2 heures</span></h2>
+
+        <!-- Partie 1 -->
+        <article class="card" id="s5-p1">
+          <h3>Partie 1 — Les droits des personnes <span class="time">30 min</span></h3>
+
+          <h4>1.1. Principes de traitement d’une demande</h4>
+          <p>Une personne peut exercer ses droits auprès de l’organisme qui traite ses données. L’organisme doit organiser un circuit de réception, de vérification proportionnée de l’identité lorsque nécessaire, de recherche, de réponse et de traçabilité. Une demande reçue par un collaborateur doit être transmise au bon interlocuteur sans retard.</p>
+          <p>En règle générale, le responsable répond dans un délai d’<strong>un mois</strong> à compter de la réception. Ce délai peut être prolongé de deux mois supplémentaires si nécessaire ; la personne doit être informée de la prolongation et de ses motifs dans le délai initial.</p>
+
+          <h4>1.2. Les quatre droits à connaître pour l’examen</h4>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Droit</th>
+                  <th>Ce que la personne peut demander</th>
+                  <th>Limites / points de vigilance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Accès (art. 15)</strong></td>
+                  <td>Confirmer si ses données sont traitées, en obtenir une copie et recevoir des informations sur le traitement.</td>
+                  <td>Protéger les droits et libertés d’autrui ; la réponse ne se limite pas toujours à exporter une base brute.</td>
+                </tr>
+                <tr>
+                  <td><strong>Rectification (art. 16)</strong></td>
+                  <td>Corriger des données inexactes ou compléter des données incomplètes.</td>
+                  <td>Vérifier la demande et corriger les systèmes pertinents.</td>
+                </tr>
+                <tr>
+                  <td><strong>Effacement (art. 17)</strong></td>
+                  <td>Obtenir l’effacement dans les situations prévues (données plus nécessaires, consentement retiré sans autre base…).</td>
+                  <td>Le droit n’est pas absolu : obligations légales, liberté d’expression, intérêt public ou défense de droits en justice peuvent justifier une conservation.</td>
+                </tr>
+                <tr>
+                  <td><strong>Portabilité (art. 20)</strong></td>
+                  <td>Recevoir certaines données fournies par la personne, dans un format structuré, couramment utilisé et lisible par machine, et les transmettre à un autre responsable.</td>
+                  <td>S’applique notamment lorsque le traitement est automatisé et fondé sur le consentement ou le contrat.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="schema">
+            <h5>Schéma de traitement d’une demande</h5>
+            <div class="steps">
+              <div class="step"><span class="step-num">1</span> Recevoir<br /><small>Enregistrer la date et la demande</small></div>
+              <div class="step"><span class="step-num">2</span> Vérifier<br /><small>Vérification proportionnée si nécessaire</small></div>
+              <div class="step"><span class="step-num">3</span> Rechercher<br /><small>Interroger les systèmes concernés</small></div>
+              <div class="step"><span class="step-num">4</span> Répondre<br /><small>Réponse claire dans le délai</small></div>
+              <div class="step"><span class="step-num">5</span> Tracer<br /><small>Conserver la preuve</small></div>
+            </div>
+          </div>
+
+          <div class="exercice">
+            <h5>Exercice 4 — Droit d’effacement</h5>
+            <p>Un ancien client demande la suppression de toutes ses données. L’entreprise doit conserver certaines factures en vertu d’une obligation légale. Que doit-elle faire ?</p>
+            <details>
+              <summary>Voir la correction</summary>
+              <p>Examiner les données et finalités séparément, supprimer celles qui n’ont plus de justification, conserver uniquement les données nécessaires à l’obligation applicable pendant la durée requise, expliquer les limites à la personne et limiter les accès aux données conservées. Il ne faut ni promettre un effacement total impossible, ni refuser globalement sans analyse.</p>
+            </details>
+          </div>
+        </article>
+
+        <!-- Partie 2 -->
+        <article class="card" id="s5-p2">
+          <h3>Partie 2 — Violation de données personnelles <span class="time">35 min</span></h3>
+
+          <h4>2.1. Définition et catégories</h4>
+          <p>Selon l’article 4(12), une <strong>violation de données personnelles</strong> est une violation de sécurité entraînant, accidentellement ou illicitement, la destruction, la perte, l’altération, la divulgation non autorisée de données personnelles ou l’accès non autorisé à celles-ci.</p>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Exemple</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Confidentialité</strong></td>
+                  <td>Un courriel contenant des données RH est envoyé au mauvais destinataire ; une base est accessible publiquement.</td>
+                </tr>
+                <tr>
+                  <td><strong>Intégrité</strong></td>
+                  <td>Un attaquant modifie des coordonnées bancaires ou des dossiers.</td>
+                </tr>
+                <tr>
+                  <td><strong>Disponibilité</strong></td>
+                  <td>Un incident rend des dossiers personnels indisponibles ou les détruit.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Une violation ne signifie pas nécessairement qu’il y a eu piratage. Une erreur humaine, une perte de support ou un envoi au mauvais destinataire peuvent aussi constituer une violation.</p>
+
+          <h4>2.2. Les premières actions opérationnelles</h4>
+          <ul>
+            <li>Détecter et signaler rapidement l’incident au point de contact interne.</li>
+            <li>Contenir l’incident : fermer l’accès exposé, désactiver un compte compromis ou isoler un système, en préservant autant que possible les preuves.</li>
+            <li>Établir les faits : données, personnes, période, cause probable, accès ou exfiltration connus, mesures déjà prises.</li>
+            <li>Évaluer les risques pour les droits et libertés des personnes.</li>
+            <li>Alerter le responsable de traitement et le DPO, s’il existe ; le sous-traitant informe le responsable sans délai indu.</li>
+            <li>Documenter la violation et les décisions prises, y compris la décision de ne pas notifier.</li>
+          </ul>
+
+          <h4>2.3. La règle des 72 heures</h4>
+          <p>L’article 33 impose au responsable de traitement de notifier la violation à l’autorité de contrôle compétente — en France, généralement la <strong>CNIL</strong> — dans les meilleurs délais et, si possible, au plus tard <strong>72 heures</strong> après en avoir pris connaissance, sauf si la violation n’est pas susceptible d’engendrer un risque pour les droits et libertés des personnes.</p>
+          <p>Le délai ne se calcule pas à partir du moment où l’attaque a commencé : le point important est le moment où le responsable a pris connaissance de la violation. Si toutes les informations ne sont pas disponibles, une notification initiale peut être effectuée puis complétée progressivement.</p>
+
+          <h4>2.4. Faut-il informer les personnes ?</h4>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Niveau de risque</th>
+                  <th>Documentation interne</th>
+                  <th>Notification à la CNIL</th>
+                  <th>Information des personnes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Aucun risque probable</td>
+                  <td>Oui</td>
+                  <td>Pas nécessaire (art. 33)</td>
+                  <td>Pas nécessaire (art. 34)</td>
+                </tr>
+                <tr>
+                  <td>Risque pour les droits et libertés</td>
+                  <td>Oui</td>
+                  <td>Oui, au plus tard dans les 72 h si possible</td>
+                  <td>Pas automatiquement requise</td>
+                </tr>
+                <tr>
+                  <td><strong>Risque élevé</strong></td>
+                  <td>Oui</td>
+                  <td>Oui</td>
+                  <td>Oui, dans les meilleurs délais, sauf exception légale</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="schema">
+            <h5>Schéma décisionnel à mémoriser</h5>
+            <ol class="decision-list">
+              <li><strong>Violation ?</strong> — Y a-t-il destruction, perte, altération, divulgation ou accès non autorisé à des données personnelles ?</li>
+              <li><strong>Documenter</strong> — Consigner les faits, effets, mesures et décisions dans tous les cas.</li>
+              <li><strong>Évaluer le risque</strong> — La violation est-elle susceptible d’engendrer un risque pour les droits et libertés ?</li>
+              <li><strong>Risque absent</strong> — Pas de notification CNIL au titre de l’article 33, mais documentation obligatoire.</li>
+              <li><strong>Risque présent</strong> — Notifier la CNIL dans les meilleurs délais et si possible sous 72 h.</li>
+              <li><strong>Risque élevé</strong> — Informer aussi les personnes concernées dans les meilleurs délais, sauf exception prévue par le RGPD.</li>
+            </ol>
+          </div>
+        </article>
+
+        <!-- Partie 3 -->
+        <article class="card" id="s5-p3">
+          <h3>Partie 3 — Contenu d’une fiche de notification <span class="time">15 min</span></h3>
+          <p>Une notification utile doit donner à l’autorité une compréhension claire de l’incident, de son ampleur, de ses conséquences et des mesures de réduction du risque. L’article 33(3) prévoit notamment :</p>
+          <ul>
+            <li>La nature de la violation, y compris si possible les catégories et le nombre approximatif de personnes concernées et d’enregistrements concernés.</li>
+            <li>Le nom et les coordonnées du DPO ou d’un autre point de contact.</li>
+            <li>Les conséquences probables de la violation.</li>
+            <li>Les mesures prises ou proposées pour remédier à la violation et, le cas échéant, atténuer ses effets.</li>
+            <li>Si tous les éléments ne sont pas disponibles, les fournir par étapes sans retard indu.</li>
+          </ul>
+          <p class="tip">Une fiche interne peut comporter davantage d’informations utiles à l’enquête (chronologie, systèmes touchés, origine, journaux, actions de confinement, décision motivée sur le risque). La fiche interne ne remplace pas nécessairement le formulaire officiel de notification de la CNIL.</p>
+          <p>Le support original contient une <strong>fiche type complète</strong> (sections A à F) prête à être utilisée comme modèle pédagogique.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Cas pratiques -->
+    <section id="cas" class="section section-alt">
+      <div class="container">
+        <h2>Cas pratiques — format examen</h2>
+
+        <article class="card">
+          <h3>Cas 1 — Courriel envoyé au mauvais destinataire</h3>
+          <p>Un salarié envoie par erreur un fichier de 150 clients à une adresse externe. Le fichier contient noms, adresses électroniques et historique de commandes. Le destinataire affirme l’avoir supprimé, mais aucune preuve technique n’est disponible.</p>
+          <p><em>Questions :</em> s’agit-il d’une violation ? Quelles actions immédiates ? Notification CNIL automatique ?</p>
+          <details>
+            <summary>Voir la correction</summary>
+            <p>Oui, il s’agit au minimum d’une divulgation non autorisée de données personnelles. Il faut contacter le destinataire, demander la suppression et la confirmation, conserver les preuves, déterminer les données et personnes concernées, évaluer les conséquences et documenter l’incident. La notification CNIL n’est pas automatique : elle dépend du risque pour les droits et libertés. Si un risque existe, notifier dans le délai applicable ; informer les personnes si le risque est élevé.</p>
+          </details>
+        </article>
+
+        <article class="card">
+          <h3>Cas 2 — Ransomware et données chiffrées</h3>
+          <p>Un ransomware rend indisponible un système RH. L’organisation ignore encore si des données ont été exfiltrées. Les sauvegardes sont en cours de vérification.</p>
+          <details>
+            <summary>Voir la correction</summary>
+            <p>La perte d’accès ou l’indisponibilité de données personnelles peut constituer une violation même sans exfiltration confirmée. Isoler les systèmes, préserver les journaux, évaluer l’intégrité des sauvegardes, identifier les données et les personnes concernées, documenter les faits. Ne pas attendre la confirmation d’une exfiltration pour évaluer l’obligation de notification. Si le risque ne peut être exclu et qu’une notification est requise, fournir les éléments disponibles puis compléter.</p>
+          </details>
+        </article>
+
+        <article class="card">
+          <h3>Cas 3 — Base exposée mais chiffrée</h3>
+          <p>Une base contenant des données personnelles a été exposée. L’organisation affirme que le chiffrement était activé, mais ne sait pas si les clés étaient également accessibles.</p>
+          <details>
+            <summary>Voir la correction</summary>
+            <p>Le chiffrement peut réduire le risque, mais ne suffit pas à conclure sans analyse. Vérifier l’algorithme, la mise en œuvre, la gestion et l’exposition des clés, les données en clair présentes ailleurs et les journaux d’accès. Documenter la décision de notifier ou non. L’exception à l’information des personnes n’est applicable que si les conditions du RGPD sont réellement remplies.</p>
+          </details>
+        </article>
+
+        <article class="card">
+          <h3>Cas 4 — Demande d’accès</h3>
+          <p>Une personne demande une copie de toutes ses données personnelles et des informations sur leur utilisation. Le service client répond qu’il ne peut transmettre que le profil visible dans l’application.</p>
+          <details>
+            <summary>Voir la correction</summary>
+            <p>La demande doit être analysée au regard de l’article 15. Il faut rechercher les données personnelles pertinentes dans les systèmes concernés et fournir une copie ainsi que les informations prévues par le RGPD, tout en protégeant les droits et libertés d’autrui. Le délai général est d’un mois, avec prolongation possible dans les conditions prévues.</p>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Lexique -->
+    <section id="lexique" class="section">
+      <div class="container">
+        <h2>Lexique des termes essentiels</h2>
+        <div class="lexique-grid">
+          <div class="lex-item">
+            <h4>Donnée personnelle (art. 4)</h4>
+            <p>Toute information se rapportant à une personne physique identifiée ou identifiable (nom, adresse e-mail nominative, identifiant de compte, certaines adresses IP, données de localisation, données de santé, etc.).</p>
+          </div>
+          <div class="lex-item">
+            <h4>Traitement</h4>
+            <p>Toute opération ou ensemble d’opérations appliquées à des données personnelles : collecte, enregistrement, classement, consultation, transmission, modification, conservation ou suppression. Peut être numérique, papier ou hybride.</p>
+          </div>
+          <div class="lex-item">
+            <h4>Responsable de traitement</h4>
+            <p>Personne physique ou morale, autorité publique, service ou autre organisme qui détermine les finalités (pourquoi) et les moyens essentiels (comment) du traitement.</p>
+          </div>
+          <div class="lex-item">
+            <h4>Sous-traitant</h4>
+            <p>Personne ou organisme qui traite des données personnelles pour le compte du responsable de traitement, selon ses instructions documentées (ex. : hébergeur, prestataire RH).</p>
+          </div>
+          <div class="lex-item">
+            <h4>Responsables conjoints</h4>
+            <p>Deux ou plusieurs responsables qui déterminent ensemble les finalités et les moyens essentiels d’un même traitement.</p>
+          </div>
+          <div class="lex-item">
+            <h4>DPO (Délégué à la protection des données)</h4>
+            <p>Personne désignée pour informer, conseiller, sensibiliser et contrôler la conformité au RGPD. Sert de point de contact avec l’autorité de contrôle (CNIL). Ne remplace pas la direction.</p>
+          </div>
+          <div class="lex-item">
+            <h4>Registre des activités de traitement (art. 30)</h4>
+            <p>Document structuré recensant les traitements mis en œuvre. Outil de pilotage et de preuve de conformité, organisé par finalité et non par logiciel.</p>
+          </div>
+          <div class="lex-item">
+            <h4>Base légale (art. 6)</h4>
+            <p>Fondement juridique qui rend un traitement licite. Les six bases sont : consentement, contrat / mesures précontractuelles, obligation légale, intérêts vitaux, mission d’intérêt public, intérêts légitimes.</p>
+          </div>
+          <div class="lex-item">
+            <h4>Consentement</h4>
+            <p>Manifestation de volonté libre, spécifique, éclairée et univoque. Doit pouvoir être prouvé et retiré aussi facilement qu’il a été donné.</p>
+          </div>
+          <div class="lex-item">
+            <h4>Droit d’accès (art. 15)</h4>
+            <p>Droit d’obtenir la confirmation que des données sont traitées, d’en recevoir une copie et d’obtenir des informations sur le traitement.</p>
+          </div>
+          <div class="lex-item">
+            <h4>Droit de rectification (art. 16)</h4>
+            <p>Droit d’obtenir la correction de données inexactes ou le complément de données incomplètes.</p>
+          </div>
+          <div class="lex-item">
+            <h4>Droit à l’effacement (art. 17)</h4>
+            <p>Droit d’obtenir l’effacement des données dans les cas prévus. Ce droit n’est pas absolu (exceptions légales, liberté d’expression, intérêt public…).</p>
+          </div>
+          <div class="lex-item">
+            <h4>Droit à la portabilité (art. 20)</h4>
+            <p>Droit de recevoir les données fournies dans un format structuré et lisible par machine, et de les transmettre à un autre responsable.</p>
+          </div>
+          <div class="lex-item">
+            <h4>Violation de données (art. 4.12)</h4>
+            <p>Violation de la sécurité entraînant destruction, perte, altération, divulgation non autorisée ou accès non autorisé à des données personnelles (confidentialité, intégrité ou disponibilité).</p>
+          </div>
+          <div class="lex-item">
+            <h4>Notification à la CNIL (art. 33)</h4>
+            <p>Obligation de notifier une violation dans les meilleurs délais et si possible au plus tard 72 heures après la prise de connaissance, sauf si le risque est improbable.</p>
+          </div>
+          <div class="lex-item">
+            <h4>Information des personnes (art. 34)</h4>
+            <p>Obligation d’informer individuellement les personnes lorsque la violation présente un risque élevé, sous réserve des exceptions (chiffrement robuste, etc.).</p>
+          </div>
+          <div class="lex-item">
+            <h4>CNIL</h4>
+            <p>Commission Nationale de l’Informatique et des Libertés — autorité de contrôle française chargée de veiller au respect du RGPD.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-alt">
+      <div class="container">
+        <h2>FAQ — Questions fréquentes</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Qui détermine les finalités et les moyens essentiels d’un traitement ?</summary>
+            <p>Le responsable de traitement. C’est le critère principal qui le distingue du sous-traitant.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Le DPO décide-t-il seul de la conformité de l’organisme ?</summary>
+            <p>Non. Le DPO conseille, sensibilise et contrôle avec indépendance. La responsabilité du traitement reste portée par le responsable de traitement.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Le registre est-il une simple liste de logiciels ?</summary>
+            <p>Non. Il doit recenser les activités de traitement par finalité. Un même logiciel peut servir à plusieurs traitements, et inversement.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Le consentement est-il toujours obligatoire ?</summary>
+            <p>Non. Le RGPD prévoit six bases légales (art. 6). Le consentement n’est qu’une base parmi d’autres.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Une case précochée « J’accepte » constitue-t-elle un consentement valide ?</summary>
+            <p>Non. Le consentement doit être univoque : une action positive claire est requise. Le silence, l’inaction ou une case précochée ne suffisent pas.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Le droit à l’effacement est-il absolu ?</summary>
+            <p>Non. Des exceptions existent, notamment lorsque le traitement est nécessaire au respect d’une obligation légale, à la liberté d’expression, pour des motifs d’intérêt public ou pour la défense de droits en justice.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Toute violation doit-elle être notifiée à la CNIL sous 72 heures ?</summary>
+            <p>Non. Toute violation doit être documentée. La notification n’est obligatoire que si la violation est susceptible d’engendrer un risque pour les droits et libertés. Le délai court à partir de la prise de connaissance par le responsable.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Quand faut-il informer les personnes concernées d’une violation ?</summary>
+            <p>Lorsque la violation est susceptible d’engendrer un risque élevé pour leurs droits et libertés, sous réserve des exceptions de l’article 34.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Que faire si les informations sont incomplètes à 72 heures ?</summary>
+            <p>Notifier les éléments disponibles si une notification est requise, puis compléter progressivement sans retard indu.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Un sous-traitant peut-il devenir responsable de traitement ?</summary>
+            <p>Oui, s’il détermine lui-même les finalités et les moyens essentiels du traitement (au-delà des instructions du responsable).</p>
+          </details>
+          <details class="faq-item">
+            <summary>Comment calculer le début du délai de 72 heures ?</summary>
+            <p>Le point de départ est le moment où le responsable de traitement a pris connaissance de la violation (et non le moment où l’attaque a commencé).</p>
+          </details>
+          <details class="faq-item">
+            <summary>Quelle est la différence entre notification CNIL et information des personnes ?</summary>
+            <p>Ce sont deux décisions distinctes. La notification CNIL dépend de l’existence d’un risque (art. 33). L’information individuelle dépend de l’existence d’un risque élevé (art. 34).</p>
+          </details>
+          <details class="faq-item">
+            <summary>Une erreur humaine peut-elle constituer une violation ?</summary>
+            <p>Oui. Une violation n’implique pas nécessairement un piratage. Une erreur humaine, une perte de support ou un envoi au mauvais destinataire peuvent constituer une violation de confidentialité.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Références & Mémo -->
+    <section id="references" class="section">
+      <div class="container">
+        <h2>Fiche mémo — Erreurs fréquentes à l’examen</h2>
+        <ul class="memo-list">
+          <li>Confondre responsable de traitement et sous-traitant.</li>
+          <li>Dire que le DPO porte seul la responsabilité de conformité.</li>
+          <li>Choisir le consentement par réflexe, sans examiner les autres bases légales.</li>
+          <li>Croire que le registre doit être organisé par logiciel plutôt que par finalité.</li>
+          <li>Confondre violation de données et cyberattaque : une erreur humaine peut suffire.</li>
+          <li>Dire que toutes les violations doivent être notifiées à la CNIL sous 72 h : le risque doit être évalué et la violation documentée dans tous les cas.</li>
+          <li>Confondre notification à la CNIL et information des personnes.</li>
+          <li>Attendre la fin de l’enquête avant de signaler l’incident ou inventer des éléments manquants.</li>
+          <li>Oublier de documenter la justification d’une décision de ne pas notifier.</li>
+        </ul>
+
+        <h3 class="mt-lg">Références officielles</h3>
+        <ul>
+          <li><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj/fra" target="_blank" rel="noopener">Règlement général sur la protection des données (RGPD)</a> — texte officiel</li>
+          <li><a href="https://www.cnil.fr/fr/definition/registre-des-activites-de-traitement" target="_blank" rel="noopener">CNIL — Registre des activités de traitement</a></li>
+          <li><a href="https://www.cnil.fr/les-bases-legales/consentement" target="_blank" rel="noopener">CNIL — Consentement</a></li>
+          <li><a href="https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre" target="_blank" rel="noopener">CNIL — Violations de données personnelles</a></li>
+        </ul>
+        <p class="note">Articles à retenir : RGPD art. 4 (définitions), 5 (principes), 6–7 (base légale et consentement), 12–22 (droits), 28 (sous-traitance), 30 (registre), 32 (sécurité), 33–34 (violations).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Support pédagogique RGPD — Séances 4 et 5 (version web enrichie)</p>
+      <p>Document à vocation pédagogique. Pour une situation réelle, examiner les faits, les textes applicables et les recommandations à jour de la CNIL.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
