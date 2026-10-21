@@ -83,6 +83,14 @@ rgpd-cours-site/
 └── README.md
 ```
 
+## Auteur
+
+**Twagirumukiza**  
+- LinkedIn : [innocent-twagirumukiza](https://www.linkedin.com/in/innocent-twagirumukiza)  
+- Site : [twagirumukiza.github.io/Twagirumukiza-Innocent](https://twagirumukiza.github.io/Twagirumukiza-Innocent/)
+
+Le PDF complet du cours est téléchargeable depuis le site (`assets/Cours_RGPD_Seances_4_5.pdf`).
+
 ## Licence / usage
 
 Document à vocation pédagogique. Pour une situation réelle, se référer aux textes applicables et aux recommandations à jour de la CNIL.

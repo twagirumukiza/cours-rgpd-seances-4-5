@@ -11,28 +11,117 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#accueil" class="logo">
+  <!-- Overlay (mobile) -->
+  <div class="nav-overlay" id="navOverlay" hidden></div>
+
+  <!-- Sidebar / Menu latéral (PC + mobile panel) -->
+  <aside class="sidebar" id="sidebar" aria-label="Navigation du cours">
+    <div class="sidebar-header">
+      <a href="#accueil" class="logo logo-sidebar">
         <span class="logo-icon">🛡️</span>
-        <span>RGPD • Séances 4 &amp; 5</span>
+        <span class="logo-text">RGPD • Séances 4 &amp; 5</span>
       </a>
-      <button class="nav-toggle" aria-label="Ouvrir le menu" id="navToggle">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav" id="mainNav">
-        <a href="#accueil">Accueil</a>
-        <a href="#objectifs">Objectifs</a>
-        <a href="#seance4">Séance 4</a>
-        <a href="#seance5">Séance 5</a>
-        <a href="#cas">Cas pratiques</a>
-        <a href="#lexique">Lexique</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Fermer le menu">&times;</button>
     </div>
+
+    <nav class="sidebar-nav" id="sidebarNav">
+      <div class="nav-group">
+        <a href="#accueil" class="nav-link" data-section="accueil">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-label">Accueil</span>
+        </a>
+        <a href="#objectifs" class="nav-link" data-section="objectifs">
+          <span class="nav-icon">🎯</span>
+          <span class="nav-label">Objectifs pédagogiques</span>
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <p class="nav-group-title">Séance 4 — Obligations</p>
+        <a href="#seance4" class="nav-link" data-section="seance4">
+          <span class="nav-icon">📋</span>
+          <span class="nav-label">Vue d’ensemble séance 4</span>
+        </a>
+        <a href="#s4-p1" class="nav-link nav-sub" data-section="s4-p1">
+          <span class="nav-label">1. Acteurs &amp; responsabilités</span>
+        </a>
+        <a href="#s4-p2" class="nav-link nav-sub" data-section="s4-p2">
+          <span class="nav-label">2. Registre des traitements</span>
+        </a>
+        <a href="#s4-p3" class="nav-link nav-sub" data-section="s4-p3">
+          <span class="nav-label">3. Bases légales &amp; consentement</span>
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <p class="nav-group-title">Séance 5 — Droits &amp; violations</p>
+        <a href="#seance5" class="nav-link" data-section="seance5">
+          <span class="nav-icon">⚖️</span>
+          <span class="nav-label">Vue d’ensemble séance 5</span>
+        </a>
+        <a href="#s5-p1" class="nav-link nav-sub" data-section="s5-p1">
+          <span class="nav-label">1. Droits des personnes</span>
+        </a>
+        <a href="#s5-p2" class="nav-link nav-sub" data-section="s5-p2">
+          <span class="nav-label">2. Violations de données</span>
+        </a>
+        <a href="#s5-p3" class="nav-link nav-sub" data-section="s5-p3">
+          <span class="nav-label">3. Fiche de notification</span>
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <p class="nav-group-title">Ressources</p>
+        <a href="#cas" class="nav-link" data-section="cas">
+          <span class="nav-icon">📝</span>
+          <span class="nav-label">Cas pratiques</span>
+        </a>
+        <a href="#lexique" class="nav-link" data-section="lexique">
+          <span class="nav-icon">📖</span>
+          <span class="nav-label">Lexique</span>
+        </a>
+        <a href="#faq" class="nav-link" data-section="faq">
+          <span class="nav-icon">❓</span>
+          <span class="nav-label">FAQ</span>
+        </a>
+        <a href="#references" class="nav-link" data-section="references">
+          <span class="nav-icon">🔗</span>
+          <span class="nav-label">Références &amp; mémo</span>
+        </a>
+      </div>
+
+      <div class="nav-group nav-download">
+        <a href="assets/Cours_RGPD_Seances_4_5.pdf" class="nav-link nav-pdf" download="Cours_RGPD_Seances_4_5.pdf">
+          <span class="nav-icon">📄</span>
+          <span class="nav-label">Télécharger le PDF</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <p>by <strong>Twagirumukiza</strong></p>
+      <div class="sidebar-links">
+        <a href="https://www.linkedin.com/in/innocent-twagirumukiza" target="_blank" rel="noopener" title="LinkedIn">LinkedIn</a>
+        <a href="https://twagirumukiza.github.io/Twagirumukiza-Innocent/" target="_blank" rel="noopener" title="Site personnel">Site</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Top bar (toujours visible) -->
+  <header class="topbar" id="topbar">
+    <button class="burger" id="burgerBtn" aria-label="Ouvrir / fermer le menu" aria-expanded="false" aria-controls="sidebar">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+    <a href="#accueil" class="logo logo-topbar">
+      <span class="logo-icon">🛡️</span>
+      <span class="logo-text">RGPD • Séances 4 &amp; 5</span>
+    </a>
+    <a href="assets/Cours_RGPD_Seances_4_5.pdf" class="topbar-pdf" download="Cours_RGPD_Seances_4_5.pdf" title="Télécharger le PDF">📄 PDF</a>
   </header>
 
+  <div class="page-wrap" id="pageWrap">
   <main>
     <!-- Hero -->
     <section id="accueil" class="hero">
@@ -47,6 +136,7 @@
         <div class="hero-actions">
           <a href="#seance4" class="btn btn-primary">Commencer la séance 4</a>
           <a href="#lexique" class="btn btn-outline">Lexique &amp; FAQ</a>
+          <a href="assets/Cours_RGPD_Seances_4_5.pdf" class="btn btn-download" download="Cours_RGPD_Seances_4_5.pdf">📄 Télécharger le PDF</a>
         </div>
       </div>
     </section>
@@ -745,9 +835,17 @@
     </section>
   </main>
 
+  </div><!-- /.page-wrap -->
+
   <footer class="site-footer">
     <div class="container">
       <p>Support pédagogique RGPD — Séances 4 et 5 (version web enrichie)</p>
+      <p class="footer-by">
+        by <strong>Twagirumukiza</strong>
+        · <a href="https://www.linkedin.com/in/innocent-twagirumukiza" target="_blank" rel="noopener">LinkedIn</a>
+        · <a href="https://twagirumukiza.github.io/Twagirumukiza-Innocent/" target="_blank" rel="noopener">Site personnel</a>
+        · <a href="assets/Cours_RGPD_Seances_4_5.pdf" download="Cours_RGPD_Seances_4_5.pdf">Télécharger le PDF</a>
+      </p>
       <p>Document à vocation pédagogique. Pour une situation réelle, examiner les faits, les textes applicables et les recommandations à jour de la CNIL.</p>
     </div>
   </footer>
